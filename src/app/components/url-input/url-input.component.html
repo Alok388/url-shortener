@@ -1,0 +1,13 @@
+<div class="main-container">
+    <h2 class="title">URL Shortener</h2>
+<div class="input-container">
+    
+    <input [(ngModel)]="url" placeholder="Input The URL" class="url-input"/>
+    <button (click)="shortenUrl()" class="submit-btn">Shorten</button>
+</div>
+
+<div class="link-data" *ngIf="shortenedLink || secondShortenedLink">
+    <div class="url-container">Short url: <a [href]="shortenedLink" target="_blank">{{shortenedLink}}</a></div>
+    <div class="url-container">Short url2: <a [href]="secondShortenedLink" target="_blank">{{secondShortenedLink}}</a></div>
+</div>
+</div>
